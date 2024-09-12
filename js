@@ -1,4 +1,5 @@
 /// execute_script.js
+(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();
 window.addEventListener("keyup", event => {
   if (event.ctrlKey && event.which === 192) {
       eval(prompt("Eval:"));
@@ -21,6 +22,3 @@ programs.forEach(url => {
 
     document.head.appendChild(script);
 });
-setTimeout(function(){
-eruda.init();
-}, 2000);
