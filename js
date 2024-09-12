@@ -6,7 +6,7 @@ window.addEventListener("keyup", event => {
 })
 
 
-/// run_scripts.js\
+/// run_scripts.js
 const programs = ["https://cdn.jsdelivr.net/npm/eruda"];
 
 programs.forEach(url => {
@@ -23,3 +23,5 @@ programs.forEach(url => {
 
     document.head.appendChild(script);
 });
+
+eruda.init();
