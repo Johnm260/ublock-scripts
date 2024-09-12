@@ -6,11 +6,10 @@ window.addEventListener("keyup", event => {
 })
 
 
-// List of scripts to load
+/// run_scripts.js\
 const programs = ["https://cdn.jsdelivr.net/npm/eruda"];
 
-/// run_scripts.js
-pprograms.forEach(url => {
+programs.forEach(url => {
     const script = document.createElement('script');
     script.src = url;
 
