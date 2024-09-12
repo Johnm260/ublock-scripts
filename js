@@ -10,8 +10,17 @@ window.addEventListener("keyup", event => {
 const programs = ["https://cdn.jsdelivr.net/npm/eruda"];
 
 /// run_scripts.js
-programs.forEach(url => {
-    var script = document.createElement('script');
+pprograms.forEach(url => {
+    const script = document.createElement('script');
     script.src = url;
+
+    script.onload = () => {
+        alert(`Script loaded successfully: ${url}`);
+    };
+
+    script.onerror = (e) => {
+        alert(`Failed to load script: ${url}`, e);
+    };
+
     document.head.appendChild(script);
 });
